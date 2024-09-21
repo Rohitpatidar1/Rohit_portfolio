@@ -8,23 +8,35 @@ function Header() {
       </div>
       <nav>
         <ul style={styles.navList}>
-          <li>
-            <a href="#about">About</a>
+          <li style={styles.navItem}>
+            <a href="#about" style={styles.navLink}>
+              About
+            </a>
           </li>
-          <li>
-            <a href="#skills">Skills</a>
+          <li style={styles.navItem}>
+            <a href="#skills" style={styles.navLink}>
+              Skills
+            </a>
           </li>
-          <li>
-            <a href="#education">Education</a>
+          <li style={styles.navItem}>
+            <a href="#education" style={styles.navLink}>
+              Education
+            </a>
           </li>
-          <li>
-            <a href="#achievements">Achievements</a>
+          <li style={styles.navItem}>
+            <a href="#achievements" style={styles.navLink}>
+              Achievements
+            </a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
+          <li style={styles.navItem}>
+            <a href="#contact" style={styles.navLink}>
+              Contact
+            </a>
           </li>
-          <li>
-            <a href="#results">Results</a>
+          <li style={styles.navItem}>
+            <a href="#results" style={styles.navLink}>
+              Results
+            </a>
           </li>
         </ul>
       </nav>
@@ -45,9 +57,11 @@ const styles = {
     alignItems: "center",
     padding: "10px 20px",
     zIndex: 1000,
+    flexWrap: "wrap",
   },
   contactInfo: {
     marginRight: "20px",
+    fontSize: "14px",
   },
   email: {
     fontSize: "16px",
@@ -57,14 +71,34 @@ const styles = {
     display: "flex",
     margin: 0,
     padding: 0,
+    flexWrap: "wrap", // Allows items to wrap in small screens
   },
   navItem: {
-    margin: "0 15px",
+    margin: "0 10px",
   },
   navLink: {
-    color: "#fff", // White text for links
+    color: "#fff",
     textDecoration: "none",
+  },
+
+  // Responsive styling using media queries
+  "@media (max-width: 768px)": {
+    header: {
+      flexDirection: "column", // Stack items on smaller screens
+      alignItems: "flex-start",
+    },
+    navList: {
+      flexDirection: "column",
+      width: "100%", // Take full width on mobile
+    },
+    navItem: {
+      margin: "5px 0", // Space between each item on mobile
+    },
+    contactInfo: {
+      marginBottom: "10px", // Add spacing below email on mobile
+    },
   },
 };
 
 export default Header;
+
