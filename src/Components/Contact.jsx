@@ -1,6 +1,6 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser"; // सही इम्पोर्ट करें
-
+import emailjs from "@emailjs/browser"; 
+import React from "react";
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
