@@ -36,7 +36,7 @@ function Contact() {
     <>
       <section id="contact">
         <form onSubmit={handleSubmit} className="emailForm">
-          <h1>contact</h1>
+          <h1>Contact</h1>
           <input
             type="text"
             placeholder="Your Name"
